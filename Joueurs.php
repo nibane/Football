@@ -105,14 +105,10 @@ class Joueurs{
         
     //affiche $nom $prenom $date joueur
     function afficherJoueur(){
-        echo $this->nom." ".$this->prenom." <br>".$this->date->format("Y");
+        echo $this->nom." ".$this->prenom." <br>".$this->nationalité." ".$this->date->format("Y");
+
     }
 
-    function afficherClub(){
-        foreach ($this->equipe as $joueurs){
-            
-        }
-    }
 
 
 
