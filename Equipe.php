@@ -107,24 +107,23 @@ class Equipe{
         return $this;
     }
 
+    function ajouterJoueurs($joueur){
+        $this->joueurs[] = $joueur;
+    }
 
+    function afficherJoueurs(){
+        $result = "";
+        foreach ($this->joueurs as $joueur){
+            $result .= $joueur;
+        }
+        echo $result;
+    }
 
 
 
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 ?>
