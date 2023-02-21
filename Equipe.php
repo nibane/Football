@@ -111,10 +111,11 @@ class Equipe{
         $this->joueurs[] = $joueur;
     }
 
-    function afficherJoueurs(){
+    function afficherTouts(){
         $result = "";
+        echo $this->nom." <br>".$this->creation->format("Y")."<br>";
         foreach ($this->joueurs as $joueur){
-            $result .= $joueur;
+            $result .= $joueur->getNom()." ".$joueur->getPrenom()." ".$joueur->getDate()->format("Y");
         }
         echo $result;
     }
