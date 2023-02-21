@@ -7,15 +7,15 @@ class Joueurs{
 
     private string $nom;
     private string $prenom;
-    private string $nationalité;
+    private string $pays;
     private DateTime $date;
     private Equipe $equipe;
 
-    function __construct(string $nom, string $prenom, string $nationalité, string $date, Equipe $equipe)
+    function __construct(string $nom, string $prenom, string $pays, string $date, Equipe $equipe)
     {
         $this->nom = $nom;
         $this->prenom = $prenom;
-        $this->nationalité = $nationalité;
+        $this->pays = $pays;
         $this->date = new DateTime($date);
         $equipe->ajouterJoueurs($this);
     }
@@ -82,21 +82,21 @@ class Joueurs{
 
     
         /**
-         * Get the value of nationalité
+         * Get the value of pays
          */ 
-        public function getNationalité()
+        public function getpays()
         {
-            return $this->nationalité;
+            return $this->pays;
         }
     
         /**
-         * Set the value of nationalité
+         * Set the value of pays
          *
          * @return  self
          */ 
-        public function setNationalité($nationalité)
+        public function setpays($pays)
         {
-            $this->nationalité = $nationalité;
+            $this->pays = $pays;
     
             return $this;
         }
@@ -105,11 +105,12 @@ class Joueurs{
         
     //affiche $nom $prenom $date joueur
     function afficherJoueur(){
-        echo $this->nom." ".$this->prenom." <br>".$this->nationalité." ".$this->date->format("Y");
+        echo $this->nom." ".$this->prenom." <br>".$this->pays." ".$this->date->format("Y")."<br>";
+        
 
     }
 
-
+    
 
 
 
