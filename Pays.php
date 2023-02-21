@@ -45,11 +45,12 @@ class Pays{
         $this->allEquipes[] = $equipes;
     }
 
-    //sert a afficher l'objet en entier
+    //recupere le nom est la date de toutes les equipes
     function afficherTouts(){
         $result = "";
+        echo $this->nom."<br>";
         foreach ($this->allEquipes as $equipes ){
-            $result .= $equipes."<br>";
+            $result .= $equipes->getNom()."<br>";
         }
         echo $result;
     }
