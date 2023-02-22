@@ -113,13 +113,14 @@ class Equipe{
     }
 
     //affiche une equipe et ses joueurs
-    function afficherTouts(){
+    function afficherEquipes(){
         $result = "";
-        echo $this->nom." <br>".$this->creation->format("Y")."<br>";
+       
         foreach ($this->joueurs as $joueur){
             $result .= $joueur->getNom()." ".$joueur->getPrenom()." ".$joueur->getDate()->format("Y");
         }
-        echo $result."<br>";
+        echo $this->nom." <br>".$this->creation->format("Y")."<br>".$result."<br>";
+       
     }
 
 
