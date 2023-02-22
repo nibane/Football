@@ -52,7 +52,7 @@ class Pays{
         foreach ($this->allEquipes as $equipes ){
             $result .= $equipes->getNom()."<br>";
         }
-        echo $result;
+        echo $result."<br>";
     }
 
 
