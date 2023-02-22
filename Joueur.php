@@ -3,13 +3,15 @@
 
 <?php
 
-class Joueurs{
+class Joueur{
 
     private string $nom;
     private string $prenom;
     private string $pays;
     private DateTime $date;
+    private array $saison;
     private Equipe $equipe;
+    
 
     function __construct(string $nom, string $prenom, string $pays, string $date, Equipe $equipe)
     {
@@ -18,6 +20,8 @@ class Joueurs{
         $this->pays = $pays;
         $this->date = new DateTime($date);
         $equipe->ajouterJoueurs($this);
+        $this->saison = [];
+        $this->equipe = $equipe;
     }
 
     /**
@@ -81,39 +85,68 @@ class Joueurs{
     }
 
     
-        /**
-         * Get the value of pays
-         */ 
-        public function getpays()
-        {
-            return $this->pays;
-        }
+    /**
+     * Get the value of pays
+     */ 
+    public function getpays()
+    {
+        return $this->pays;
+    }
     
-        /**
-         * Set the value of pays
-         *
-         * @return  self
-         */ 
-        public function setpays($pays)
-        {
-            $this->pays = $pays;
+    /**
+     * Set the value of pays
+     *
+     * @return  self
+     */ 
+    public function setpays($pays)
+    {
+        $this->pays = $pays;
+        
+        return $this;
+    }
     
-            return $this;
-        }
+    
+    /**
+     * Get the value of saison
+     */ 
+    public function getSaison()
+    {
+        return $this->saison;
+    }
 
+    /**
+     * Set the value of saison
+     *
+     * @return  self
+     */ 
+    public function setSaison($saison)
+    {
+        $this->saison = $saison;
 
-        
-    //affiche $nom $prenom $date joueur
-    function afficherJoueur(){
-        echo $this->nom." ".$this->prenom." <br>".$this->pays." ".$this->date->format("Y")."<br>";
-        
-
+        return $this;
+    }
+    
+    //integre saison aux tableaux saison
+    function ajouterSaison(Saison $saison){
+        $this->saison[] = $saison;
     }
 
     
+    //affiche $nom $prenom $date joueur
+    function afficherJoueur(){
+        echo $this->nom." ".$this->prenom." <br>".$this->pays." ".$this->date->format("Y")."<br>";
+        foreach($this->saison as $saison){
+            echo $saison->afficherSaison();
+        }
+        
+    }
+
+    function afficherSaison(){
+
+    }
     
-
-
+    
+    
 }
 
 
