@@ -107,17 +107,19 @@ class Equipe{
         return $this;
     }
 
+    //ajoute objet $joueur dans le tableaux joueurs
     function ajouterJoueurs($joueur){
         $this->joueurs[] = $joueur;
     }
 
+    //affiche une equipe et ses joueurs
     function afficherTouts(){
         $result = "";
         echo $this->nom." <br>".$this->creation->format("Y")."<br>";
         foreach ($this->joueurs as $joueur){
             $result .= $joueur->getNom()." ".$joueur->getPrenom()." ".$joueur->getDate()->format("Y");
         }
-        echo $result;
+        echo $result."<br>";
     }
 
 
