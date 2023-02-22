@@ -46,13 +46,13 @@ class Pays{
     }
 
     //recupere le nom est la date de toutes les equipes
-    function afficherTouts(){
+    function afficherPays(){
         $result = "";
-        echo $this->nom."<br>";
+       
         foreach ($this->allEquipes as $equipes ){
             $result .= $equipes->getNom()."<br>";
         }
-        echo $result."<br>";
+       echo "<div class='boite'><div class='titre'>".$this->nom."</div> <div class='bas'>".$result."</div></div><br>";
     }
 
 
