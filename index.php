@@ -25,11 +25,11 @@ $pays2 = new Pays("BIDULE");
 
 $equipe1 = new Equipe("PSG","1970",$pays1);
 $equipe2 = new Equipe("OM","1960",$pays1);
-$equipe3 = new Equipe("BiduleTeam","2002",$pays2);
-$equipe4 = new Equipe("MachinTeam","2003",$pays2);
+$equipe3 = new Equipe("Bidule-Team","2002",$pays2);
+$equipe4 = new Equipe("Machin-Team","2003",$pays2);
 
-$joueur1 = new Joueur("prenomFrancais","nomFrancais","France","1999",$equipe1);
-$joueur2 = new Joueur("nomFrancais","prenomFrancais","France","2000",$equipe2);
+$joueur1 = new Joueur("prenom-Francais","nom-Francais","France","1999",$equipe1);
+$joueur2 = new Joueur("nom-Francais","prenom-Francais","France","2000",$equipe2);
 $joueur3 = new Joueur("truc","muche","Bidulais","2000",$equipe2);
 $joueur4 = new Joueur("muche","truc","Bidulais","2000",$equipe2);
 
@@ -46,19 +46,19 @@ $saison2 = new Saison("2008",$joueur1,$equipe4);
 $saison2 = new Saison("2007",$joueur1,$equipe3);
 
 
-$pays1->afficherTouts();
-$pays2->afficherTouts();
+$pays1->afficherPays();
+$pays2->afficherPays();
 
-$equipe1->afficherTouts();
-$equipe2->afficherTouts();
-$equipe3->afficherTouts();
-$equipe4->afficherTouts();
+// $equipe1->afficherEquipes();
+// $equipe2->afficherEquipes();
+// $equipe3->afficherEquipes();
+// $equipe4->afficherEquipes();
 
 
-$joueur1->afficherJoueur();
-$joueur2->afficherJoueur();
-$joueur3->afficherJoueur();
-$joueur4->afficherJoueur();
+// $joueur1->afficherJoueur();
+// $joueur2->afficherJoueur();
+// $joueur3->afficherJoueur();
+// $joueur4->afficherJoueur();
 
 
 ?>
