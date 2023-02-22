@@ -141,9 +141,7 @@ class Joueur{
         
     }
 
-    function afficherSaison(){
-
-    }
+    
     
     
     

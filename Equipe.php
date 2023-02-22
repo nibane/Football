@@ -6,16 +6,18 @@
 class Equipe{
     
     private string $nom;
-    private DateTime $creation;
+    private int $creation;
     private Pays $pays ;
     private array $joueurs ;
+    private array $saison ;
 
-    function __construct(string $nom, string $creation, Pays $pays)
+    function __construct(string $nom, int $creation, Pays $pays)
     {
         $this->nom = $nom;
-        $this->creation = new DateTime($creation);
+        $this->creation = $creation;
         $this->pays = $pays;
         $this->joueurs = [];
+        $this->saison = [];
         $pays->ajouterEquipes($this);
         
     }
@@ -116,14 +118,16 @@ class Equipe{
     function afficherEquipes(){
         $result = "";
        
-        foreach ($this->joueurs as $joueur){
-            $result .= $joueur->getNom()." ".$joueur->getPrenom()." ".$joueur->getDate()->format("Y");
+        foreach ($this->saison as $joueur){
+            $result .= $this->getNom()." ".$joueur->getPrenom()." ".$joueur->getDateDebut();
         }
-        echo $this->nom." <br>".$this->creation->format("Y")."<br>".$result."<br>";
+        echo $this->nom." <br>".$this->creation."<br>".$result."<br>";
        
     }
 
-
+    function ajouterSaison(Saison $saison){
+        $this->saison[] = $saison;
+    }
 
 
 

@@ -15,6 +15,7 @@ class Saison{
     {
         $this->dateDebut = $dateDebut;
         $joueur->ajouterSaison($this);
+        $equipe->ajouterSaison($this);
         $this->joueur = $joueur;
         $this->equipe = $equipe;
     }
@@ -84,7 +85,7 @@ class Saison{
 
 
     function afficherSaison(){
-        echo $this->equipe->getNom()." (".$this->getDateDebut().")<br><br>";
+        echo $this->equipe->getNom()." (".$this->getDateDebut().")<br>";
     }
 
 
