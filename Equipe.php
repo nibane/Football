@@ -26,13 +26,18 @@ class Equipe{
     
     //affiche l'equipe est ses joueurs
     function afficherEquipe(){
-        echo $this->nomEquipe." ".$this->pays->getNomPays()." ".$this->dateCreation->format("Y");
+        echo $this->nomEquipe." ".$this->pays->getNomPays()." ".$this->dateCreation->format("Y")." ".$this->afficherJoueurs();
     }
 
     
-    function afficherJoueur(){
-        
+    function afficherJoueurs(){
+        $result = "";
+        foreach($this->saisons as $saison){
+        $result .= $saison->getJoueur()->getnom()." ".$saison->getJoueur()->getPrenom()." ".$saison->getAnneeDebut()."<br>";
+        }
+        return $result;
     }
+
     
     
     
