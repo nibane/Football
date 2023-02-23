@@ -20,6 +20,13 @@ spl_autoload_register(function ($class_name) {
 });
 
 
+$pays1 = new Pays("France");
+
+$equipe1 = new Equipe("PSG",$pays1,"1970/07/12");
+
+$joueur1 = new Joueur("kilian","mbape","1998/02/23",$pays1);
+
+// echo $joueur1->getPays()->getNomPays();
 
 
 
