@@ -24,21 +24,25 @@ class Equipe{
 
 
     
-
-
-
-
-
-
-
-
-
-    function ajouterSaisons(Saison $saison){
-        $this->saisons = $saison;
+    //affiche l'equipe est ses joueurs
+    function afficherEquipe(){
+        echo $this->nomEquipe." ".$this->pays->getNomPays()." ".$this->dateCreation->format("Y");
     }
 
-
-
+    
+    function afficherJoueur(){
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    function ajouterSaisons(Saison $saison){
+        $this->saisons[] = $saison;
+    }
  
 
     /**
