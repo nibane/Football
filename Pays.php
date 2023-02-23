@@ -27,8 +27,21 @@ class Pays{
         $this->equipes[] = $equipe;
     }
 
+    //affiche les equipes d'un pays
+    function afficherPays(){
+        
+        
+        echo $this->nomPays." ".$this->afficherEquipes();
+    }
 
-
+    //affiche le contenue du tableau equipes
+    function afficherEquipes(){
+        $result = "";
+        foreach ($this->equipes as $equipe){
+            $result .= $equipe->getNomEquipe();
+        }
+        return $result;
+    }
 
     /**
      * Get the value of nomPays
