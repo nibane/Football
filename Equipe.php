@@ -26,7 +26,11 @@ class Equipe{
     
     //affiche l'equipe est ses joueurs
     function afficherEquipe(){
-        echo "<div class=boiteEquipe><div class=titre>".$this->nomEquipe." ".$this->pays->getNomPays()." ".$this->dateCreation->format("Y")."</div><div class=bas> ".$this->afficherJoueurs()."</div></div>";
+        echo "<div class='boiteEquipe'>
+                <div class='titre'>".$this->nomEquipe." ".$this->pays->getNomPays()." ".$this->dateCreation->format("Y")."</div>
+                <div class='bas'> ".$this->afficherJoueurs()."</div>
+            </div>";
+        
     }
 
     

@@ -8,10 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-    
-</body>
-</html>
-
 
 <?php
 
@@ -39,20 +35,32 @@ $saison4 = new Saison($joueur3,$equipe1,1971);
 
 
 //affiche les pays est leur equipe
+
+echo "<div class='ligne1'>";
 $pays1->afficherPays();
 $pays2->afficherPays();
+echo "</div>";
 
 //affiche les equipe est leur joueurs avec leur date d'integration dans l'equipe
+
+echo "<div class='ligne2'>";
 $equipe1->afficherEquipe();
 $equipe2->afficherEquipe();
+echo "</div>";
 
 //affiche les joueurs est la date des equipes dans lequel ils sont ou etait
+
+echo "<div class='ligne3'>";
 $joueur1->afficherJoueur();
 $joueur2->afficherJoueur();
 $joueur3->afficherJoueur();
-
+echo "</div>";
 
 
 
 
 ?>
+</body>
+</html>
+
+

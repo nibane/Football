@@ -30,7 +30,7 @@ class Joueur{
     }
 
     function afficherJoueur(){
-        echo "<div class=boiteJoueur><div class=titre>".$this->nom." ".$this->prenom." <br>".$this->pays->getNomPays()." - ".$this->ageJoueur()."</div><div class=bas>".$this->afficherEquipe()."</div></div>";
+        echo "<div class='boiteJoueur'><div class='titre'>".$this->nom." ".$this->prenom." <br>".$this->pays->getNomPays()." - ".$this->ageJoueur()."</div><div class='bas'>".$this->afficherEquipe()."</div></div>";
     }
 
     

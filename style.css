@@ -1,6 +1,29 @@
-body{
+div.ligne1{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    gap: 20px;
 }
+
+div.ligne2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    gap: 20px;
+}
+    
+div.ligne3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    gap: 20px;
+}
+    
+
+
 div.boitePays{
     flex-wrap: nowrap;
     width: 150px;
@@ -42,7 +65,7 @@ div.bas{
     
     border-radius: 5px;
     font-size: 12px;
-    padding: 40px 0px 10px 20px;
+    padding: 30px 0px 10px 20px;
     
 
 }
