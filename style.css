@@ -1,27 +1,48 @@
-div.boite{
+body{
+    display: flex;
+}
+div.boitePays{
     flex-wrap: nowrap;
     width: 150px;
     height: 150px;
     background: rgb(164, 66, 66);
     border-radius: 5px;
-    
+    color: white;
 }
 
+div.boiteEquipe{
+    flex-wrap: nowrap;
+    width: 150px;
+    height: 150px;
+    background: darkblue;
+    border-radius: 5px;
+    color: white;
+}
+
+div.boiteJoueur{
+    flex-wrap: nowrap;
+    width: 150px;
+    height: 150px;
+    background: darkgreen;
+    border-radius: 5px;
+    color: white;
+}
+
+
+
 div.titre{
-    background: rgb(164, 66, 66);
-    /* width: 100%;
-    height: 50%; */
+    
+    border-radius: 5px;
     padding: 20px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 
 div.bas{
-    background: rgb(164, 66, 66);
-    /* height: 50%;
-    width: 100%; */
-    font-size: 14px;
-    padding: 50px 0px 0px 20px;
+    
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 40px 0px 10px 20px;
     
 
 }

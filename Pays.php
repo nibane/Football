@@ -29,7 +29,7 @@ class Pays{
 
     //affiche les equipes d'un pays
     function afficherPays(){
-        echo $this->nomPays." ".$this->afficherEquipes()."<br>";
+        echo "<div class=boitePays><div class=titre>".$this->nomPays."</div><div class=bas> ".$this->afficherEquipes()."</div></div>";
     }
 
     //affiche le contenue du tableau equipes
