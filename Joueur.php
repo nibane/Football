@@ -26,13 +26,28 @@ class Joueur{
     }
 
     function ajouterSaisons(Saison $saison){
-        $this->saisons = $saison;
+        $this->saisons[] = $saison;
+    }
+
+    function afficherJoueur(){
+        echo $this->nom." ".$this->prenom." <br>".$this->pays->getNomPays()." - ".$this->ageJoueur()."<br>".$this->afficherEquipe();
     }
 
     
+    function afficherEquipe(){
+        $result = "";
+        foreach ($this->saisons as $saison){
+            $result .= $saison->getEquipes()->getNomEquipe()." ".$saison->getAnneeDebut()."<br>" ;
+        }
+        return $result;
+    }
 
 
-
+    function ageJoueur(){
+        $date = new DateTime() ;
+        $age = date_diff($this->dateNaissance,$date);
+        return $age->format("%y")." ans ";
+    }
 
 
 
